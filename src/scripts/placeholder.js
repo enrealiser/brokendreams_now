@@ -1,0 +1,24 @@
+const { url, letter } = Astro.props;
+    
+    // URL of the page or endpoint containing the text content
+    var textUrl = "${url}${letter}}";
+	
+	
+    // Fetch the text content from the URL
+    fetch(textUrl)
+        .then(response => response.text())
+        .then(textContent => {
+            // Find the container element where text will be inserted
+            var container = document.getElementById("${url}_reference");
+
+
+            // Create a new text node with the fetched content
+            var textNode = document.createTextNode(textContent);
+
+
+            // Append the text node to the container element
+            container.appendChild(textNode);
+        })
+        .catch(error => {
+            console.error('Error fetching text content:', error);
+        });

@@ -1,9 +1,8 @@
 ---
 import '../styles/global.css';
 import Nav from '../components/Nav.astro';
-import SocialMedia from '../components/SocialMedia.astro';
 
-const pageTitle = "season";
+const pageTitle = "catchusoutside";
 const a = "Description";
 const b = " minor description";
 const c = "Quotes";
@@ -19,16 +18,12 @@ const d = "references";
 
 		<title>{pageTitle}</title>
 	</head>
-
 	<body>
-		<Nav />
+        <Nav />
 		<h1>{pageTitle}</h1>
 		<h2>{a}</h2>
 		<h3>{b}</h3>
 		<h4>{c}</h4>
 		<h5>{d}</h5>
-		
-		<SocialMedia platform="soundcloud" username="meansoup" />
-
 	</body>
 </html>
